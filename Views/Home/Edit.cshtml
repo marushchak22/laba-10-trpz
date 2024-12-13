@@ -1,0 +1,29 @@
+﻿@model BrandType
+
+<link rel="stylesheet" href="~/css/Edit.css" asp-append-version="true" />
+
+<h2>Редагувати марку</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="BrandTypeID" />
+    <div>
+        <label>Назва марки</label>
+        <input asp-for="BrandName" />
+        <span asp-validation-for="BrandName"></span>
+    </div>
+    <div>
+        <label>Країна</label>
+        <input asp-for="Country" />
+        <span asp-validation-for="Country"></span>
+    </div>
+    <div>
+        <label>Тип велосипеду</label>
+        <select asp-for="BicycleTypeID" asp-items="ViewBag.BicycleType" class="form-control" required>
+            <option value="">-- Оберіть тип --</option>
+        </select>
+        <span asp-validation-for="BicycleTypeID" class="text-danger"></span>
+    </div>
+
+    <button type="submit">Зберегти</button>
+</form>
+<a href="@Url.Action("Index", "Home")">Назад</a>

@@ -1,0 +1,121 @@
+﻿/* Загальний фон і шрифт */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    background: linear-gradient(to bottom right, #fef9f9, #f2e8e8);
+    color: #333;
+}
+
+/* Заголовок */
+h2 {
+    font-weight: 700;
+    color: #a52a2a;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+    h2::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background: #a52a2a;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+/* Текст */
+p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Контейнер із інформацією про марку */
+div {
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+    div p {
+        margin: 10px 0;
+        color: #333;
+    }
+
+        div p strong {
+            color: #2d572c;
+            font-weight: 600;
+        }
+
+/* Форму розташуємо по центру */
+form {
+    text-align: center;
+}
+
+/* Кнопки */
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    border: none;
+    margin: 0 10px;
+}
+
+    /* Кнопка Видалити */
+    .btn.btn-danger {
+        background-color: #a52a2a;
+        color: #fff;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+        .btn.btn-danger:hover {
+            background-color: #8b2323;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn.btn-danger:active {
+            background-color: #7c1e1e;
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+    /* Кнопка Скасувати */
+    .btn.btn-secondary {
+        background-color: #ccc;
+        color: #333;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+        .btn.btn-secondary:hover {
+            background-color: #b3b3b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn.btn-secondary:active {
+            background-color: #999;
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+/* Декоративний елемент (велосипед) */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background: url('../photo/bicycle.svg') no-repeat center/contain;
+    opacity: 0.2;
+}

@@ -1,0 +1,162 @@
+/* Загальний стиль сторінки */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background: linear-gradient(to bottom right, #eafaf1, #cce8d7);
+    color: #333;
+}
+
+/* Заголовок */
+h2 {
+    font-weight: 700;
+    color: #2d572c;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+    /* Невеликий декоративний елемент біля заголовку */
+    h2::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 2px;
+        background: #2d572c;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+/* Кнопка для додавання нової марки */
+a.btn.btn-primary {
+    background-color: #2d572c !important;
+    border-color: #2d572c !important;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+    a.btn.btn-primary:hover {
+        background-color: #24611f !important;
+        border-color: #24611f !important;
+    }
+
+/* Таблиця */
+table.table {
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    /* Заголовок таблиці */
+    table.table thead {
+        background: #2d572c;
+        color: #fff;
+    }
+
+    table.table th {
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Тіло таблиці */
+    table.table tbody tr {
+        transition: background 0.3s;
+    }
+
+        table.table tbody tr:nth-child(even) {
+            background: #f7fdf9;
+        }
+
+    table.table td {
+        padding: 12px;
+        vertical-align: middle;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        color: #333;
+    }
+
+    table.table tbody tr:hover {
+        background: #eafaf1;
+    }
+
+/* Кнопки дій у таблиці */
+.btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+    /* Кнопка "Видалити" */
+    .btn.btn-danger {
+        background-color: #a52a2a;
+        color: #fff;
+        border: none;
+        transition: background 0.3s ease;
+    }
+
+        .btn.btn-danger:hover {
+            background-color: #8b2323;
+        }
+
+    /* Кнопка "Редагувати" */
+    .btn.btn-edit {
+        background-color: #f1b40f;
+        color: #fff;
+        border: none;
+        transition: background 0.3s ease;
+    }
+
+        .btn.btn-edit:hover {
+            background-color: #cf980d;
+        }
+
+/* Декоративний елемент, можна додати іконку велосипеда */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background: url('../photo/bicycle.svg') no-repeat center/contain;
+    opacity: 0.3;
+}
+
+.add-bike-button {
+    background-color: #4CAF50 !important;
+    border-color: #4CAF50 !important;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+    .add-bike-button:hover {
+        background-color: #3d8a41 !important;
+        border-color: #3d8a41 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .add-bike-button:active {
+        background-color: #357635 !important;
+        border-color: #357635 !important;
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+

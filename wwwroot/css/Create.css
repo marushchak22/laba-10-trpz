@@ -1,0 +1,127 @@
+﻿/* Загальний фон і стиль сторінки */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    background: linear-gradient(to bottom right, #eafaf1, #cce8d7);
+    color: #333;
+}
+
+/* Заголовок */
+h2 {
+    font-weight: 700;
+    color: #2d572c;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+    h2::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 2px;
+        background: #2d572c;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+/* Стилі для форми */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    form div {
+        margin-bottom: 20px;
+    }
+
+    /* Підписи до полів */
+    form label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #2d572c;
+    }
+
+/* Інпут та селект */
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+    .form-control:focus {
+        outline: none;
+        border-color: #2d572c;
+        box-shadow: 0 0 4px rgba(45,87,44,0.2);
+    }
+
+/* Повідомлення про помилки */
+.text-danger {
+    font-size: 13px;
+    color: #a52a2a;
+}
+
+/* Кнопки */
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border: none;
+}
+
+    /* Кнопка "Зберегти" */
+    .btn.btn-primary {
+        background-color: #4CAF50;
+        color: #fff;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+        .btn.btn-primary:hover {
+            background-color: #3d8a41;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn.btn-primary:active {
+            background-color: #357635;
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+    /* Кнопка "Назад" */
+    .btn.btn-secondary {
+        background-color: #ccc;
+        color: #333;
+        margin-left: 10px;
+        transition: background 0.3s ease;
+    }
+
+        .btn.btn-secondary:hover {
+            background-color: #b3b3b3;
+        }
+
+/* Декоративний елемент (велосипед) */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background: url('../photo/bicycle.svg') no-repeat center/contain;
+    opacity: 0.3;
+}

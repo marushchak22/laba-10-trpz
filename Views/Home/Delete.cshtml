@@ -1,0 +1,21 @@
+﻿@model BrandType
+
+<link rel="stylesheet" href="~/css/Delete.css" asp-append-version="true" />
+
+<h2>Видалити марку</h2>
+
+<p>Ви впевнені, що хочете видалити цю марку?</p>
+
+<div>
+    <p><strong>Назва:</strong> @Model.BrandName</p>
+    <p><strong>Країна:</strong> @Model.Country</p>
+    <p><strong>Тип велосипеду:</strong> @Model.BicycleType?.TypeName</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.BrandTypeID" />
+    <button type="submit" class="btn btn-danger">Видалити</button>
+    <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Скасувати</a>
+</form>
+
+

@@ -1,0 +1,36 @@
+﻿
+
+@model IEnumerable<dynamic>
+
+<h2>Список марок</h2>
+
+<!-- Кнопка для створення нової марки -->
+<a asp-action="Create" class="btn btn-primary mb-3 add-bike-button">Додати нову марку</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Назва</th>
+            <th>Країна</th>
+            <th>Тип велосипеду</th>
+            <th>Видалити</th>
+            <th>Редагувати</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var brand in Model)
+        {
+            <tr>
+                <td>@brand.BrandName</td>
+                <td>@brand.Country</td>
+                <td>@brand.BicycleTypeName</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@brand.BrandTypeID" class="btn btn-danger">Видалити</a>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@brand.BrandTypeID" class="btn btn-edit">Редагувати</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
